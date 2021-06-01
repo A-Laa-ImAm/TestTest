@@ -1,0 +1,401 @@
+/*......................... GENERAL STYLES ..............................*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+/*    font-family: 'Fjalla One', sans-serif;*/
+        font-family: 'Nunito', sans-serif;
+}
+.container{
+    width: 75%;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.btn{
+    font-family: 'Nunito', sans-serif;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7)
+}
+/*........................ HEADER --- LOGO/MENU .........................*/
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+/*    background-color: rgba(37, 47, 49,.7);*/
+    height: 70px;
+    line-height: 70px;
+}
+header .headerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+                      /*............LOGO..............*/
+header .headerContent .logo{
+    width: 25%;
+}
+header .headerContent .logo h1 a{
+    color: #35d678;
+    font-size: 35px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 2px solid #35d678;
+    text-align: center
+}
+
+                      /*............MENU..............*/
+header .headerContent .menu{
+    width: 75%;
+}
+header .headerContent .menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+header .headerContent nav ul li{
+    display: inline-block
+}
+header .headerContent nav ul li a{
+    color: #ffffff;
+    font-size: 17px;
+}
+header .headerContent nav ul li a.active,
+header .headerContent nav ul li a:hover{
+    color: #35d678;
+}
+/*................. MAIN SECTION PHOTO HERO --- SLIDER ..................*/
+section.photoHero{
+    height: 100vh;
+    background-image: url(../images/59309980_ml-1200x630-c-ar1.91.jpg);
+    background-size: cover;
+    position: relative
+    
+}
+section.photoHero .photoHeroContent{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)    
+}
+section.photoHero .photoHeroContent .nameAndJob{
+/*    background-color: rgba(37, 47, 49,.7);*/
+    border-top: 4px solid #35d678;
+    border-bottom: 4px solid #35d678;
+}
+section.photoHero .photoHeroContent .nameJob{
+   color: #ffffff;
+   font-size: 35px   
+}
+section.photoHero .photoHeroContent .btn{
+    margin-top: 30px;
+    background: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid #35d678;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative
+}
+section.photoHero .photoHeroContent .btn:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #35d678;
+    z-index: -1;
+    transition: width 0.5s;
+}
+section.photoHero .photoHeroContent .btn:hover:after{
+    width:  100%;
+}
+/*........................ VALUES/GOALS/HOBBIES .........................*/
+section.Features{
+    height: 110px;
+/*    background-color: aqua;*/
+    margin: 50px 0;
+}
+section.Features .featuresContent{
+    display: flex;
+    justify-content: space-between;
+/*    background-color: chocolate*/
+}
+section.Features .feat{
+    width: 300px;
+    height: 110px;
+/*    background-color: brown*/
+}
+section.Features .feat h2{
+    margin-bottom: 20px;
+    text-transform: uppercase
+}
+section.Features .feat p{
+    color: #acacac;
+    text-align: justify
+}
+/*........................ ABOUT ME --- IMG/INFO .........................*/
+section.aboutMe{
+    height: 500px;
+/*    background-color: #acacac*/
+    background-color: #849c8b
+}
+section.aboutMe .aboutmeContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+                                /*............IMG (LEFT)..............*/
+section.aboutMe .aboutmeContent img{
+    width: 450px;
+    height: 500px;
+    object-fit: cover
+}
+                                /*............INFO (RIGHT)..............*/
+section.aboutMe .aboutmeContent .infoRight{
+    width: 500px;
+    height: 400px;
+/*    background-color: crimson*/
+}
+section.aboutMe .aboutmeContent .infoRight h2{
+    margin-bottom: 20px;
+    text-transform: uppercase
+}
+section.aboutMe .aboutmeContent .infoRight p{
+/*    color: #ffffff*/
+    color: #ecebe4
+}
+section.aboutMe .aboutmeContent .infoRight .hobbies{
+    width: 500px;
+    height: 180px;
+/*    background-color: chartreuse;*/
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+/*    flex-direction: row;*/
+    flex-wrap: wrap
+}
+section.aboutMe .aboutmeContent .infoRight .hobbies .hob{
+    width: 220px;
+    height: 80px;
+/*    background-color: darkgoldenrod*/
+}
+section.aboutMe .aboutmeContent .infoRight .hobbies .hob p{
+    text-align: justify;
+    margin-top: 10px;
+}
+/*........................ MY SKILLS --- SKILLS/PROGRESS .........................*/
+section.mySkills{
+    height: 135px;
+/*    background-color: #f797c0;*/
+    margin: 50px 0
+}
+section.mySkills .mySkillsContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+                                  /*............SKILLS (LEFT)..............*/
+section.mySkills .mySkillsContent .skillsLeft{
+    width: 45%;
+/*    background-color: #a850ff*/
+}
+section.mySkills .mySkillsContent .skillsLeft h2{
+    margin-bottom: 20px;
+}
+section.mySkills .mySkillsContent .skillsLeft p{
+    margin-bottom: 20px;
+}
+                                  /*............PROGRESS (RIGHT)..............*/
+section.mySkills .mySkillsContent .progressRight{
+    width: 45%;
+/*    background-color: #00ff9d*/
+}
+/*........................... ---RESUME--- .................................*/
+section.resume{
+    background-color: #849c8b;
+    height: 200px;
+    text-align: center;
+    padding: 50px 0
+}
+section.resume h2{
+    margin-bottom: 20px
+}
+section.resume p{
+    margin-bottom: 20px
+}
+/*........................ MY EDUCATION --- EDUCATION/DIPLOMA  .........................*/
+section.myEducation{
+    height: 135px;
+/*    background-color: #f797c0;*/
+    margin: 50px 0
+}
+section.myEducation .myEducationContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+                                  /*............EDUCATION (LEFT)..............*/
+section.myEducation .myEducationContent .educationLeft{
+    width: 45%;
+/*    background-color: #a850ff*/
+}
+section.myEducation .myEducationContent .educationLeft h2{
+    margin-bottom: 20px;
+}
+section.myEducation .myEducationContent .educationLeft p{
+    margin-bottom: 20px;
+}
+                                  /*............DIPLOMA (RIGHT)..............*/
+section.myEducation .myEducationContent .diplomaRight{
+    width: 45%;
+/*    background-color: #00ff9d*/
+}
+/*........................ Work EXPERIENCE --- EXPERIENCE/EXEP  .........................*/
+section.workExperience{
+    height: 135px;
+/*    background-color: #f797c0;*/
+    margin: 50px 0
+}
+section.workExperience .workExperienceContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+                                  /*............EXPERIENCE (LEFT)..............*/
+section.workExperience .workExperienceContent .experienceLeft{
+    width: 45%;
+/*    background-color: #a850ff*/
+}
+section.workExperience .workExperienceContent .experienceLeft h2{
+    margin-bottom: 20px;
+}
+section.workExperience .workExperienceContent.experienceLeft p{
+    margin-bottom: 20px;
+}
+                                  /*............EXEP (RIGHT)..............*/
+section.workExperience .workExperienceContent .exepRight{
+    width: 45%;
+/*    background-color: #00ff9d*/
+}
+/*........................... ---TESTEMONIALS--- .................................*/
+section.testemonials{
+    background-color: #849c8b;
+    height: 200px;
+    text-align: center;
+    padding: 50px 0
+}
+section.testemonials p{
+    margin-bottom: 20px
+}
+/*........................... PORTFOLIO---OUR WORK .................................*/
+section.portfolio{
+        height: 800px;
+/*    background-color: #8e55c4;*/
+    text-align: center;
+    margin: 50px 0
+}
+section.portfolio .portfolioContent h2{
+    margin-bottom: 20px;
+}
+section.portfolio .portfolioContent p{
+    margin-bottom: 20px;
+}
+                                    /*............OUR WORK..............*/
+section.portfolio .portfolioContent .ourWork{
+/*    background-color: black;*/
+    display: flex;
+    justify-content: space-between;
+/*    align-items: space-between;*/
+    flex-wrap: wrap
+}
+section.portfolio .portfolioContent .ourWork .photoSingle{
+    padding: 20px 0 20px 20px;
+}
+section.portfolio .portfolioContent .ourWork img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+/*.......................... CONTACT ME---CONTACT/FORM ................................*/
+section.contactMe{
+    height: 200px;
+    background-color: #252f31;
+    padding: 50px 0
+}
+section.contactMe .contactMeContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+                                  /*............EDUCATION (LEFT)..............*/
+section.contactMe .contactMeContent .contactLeft{
+    width: 45%;
+/*    background-color: #a850ff*/
+}
+section.contactMe .contactMeContent .contactLeft h2{
+    margin-bottom: 20px;
+}
+section.contactMe .contactMeContent .contactLeft p{
+    margin-bottom: 20px;
+}
+                                  /*............DIPLOMA (RIGHT)..............*/
+section.contactMe .contactMeContent .formRight{
+    width: 45%;
+/*    background-color: #00ff9d*/
+}
+/*.......................... ---FOOTER--- ................................*/
+footer{
+    text-align: center;
+    background-color: #191e22;
+    padding: 20px;
+}
+footer a{
+    color: #35d678
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
